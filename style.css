@@ -1,3 +1,12 @@
+/* set variables for the theme */
+:root {
+    --primary-color: #1d1136;
+    --primary-color-light: #301d55;
+    --secondary-color: #ffb920;
+    --background-color: #fff7eb;
+    --font-family: 'Tahoma', sans-serif;
+}
+
 html {
     height: 100%;
     scrollbar-width: none;
@@ -38,7 +47,6 @@ h3 {
     h1 {
         font-size: 8rem;
     }
-    
     h2 {
         font-size: 4rem;
     }
@@ -100,7 +108,7 @@ a {
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     color: transparent;
-    -webkit-text-stroke: 3px #301d55;
+    -webkit-text-stroke: 3px var(--primary-color);
     transform: translateY(-4rem);
     opacity: 0;
     animation: drop 1s forwards;
@@ -161,12 +169,12 @@ a {
 .home-title-btn {
     height: auto;
     width: fit-content;
-    border: 1px solid #301d55;
+    border: 1px solid var(--primary-color);
     padding: .5rem 1.5rem;
     border-radius: 10px;
     background-color: transparent;
     font-size: x-large;
-    color: #301d55;
+    color: var(--primary-color);
     cursor: pointer;
 }
 
@@ -183,7 +191,7 @@ a {
     width: 88px;
     height: 88px;
     bottom: calc(10% - 44px);
-    left: calc(6% - 44px);
+    right: calc(6% - 44px);
     padding: 22px 24px;
     border-radius: 50%;
     cursor: pointer;
@@ -209,7 +217,29 @@ a {
     }
 }
 
-.section {
+#project-description {
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+    text-align: center;
+    width: 100%;
+    text-wrap: balance;
+    gap: .5rem;
+}
+
+
+.horizontal-section {
+    height: 100vh;
+    display: flex;
+    padding: 3rem 8rem;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+}
+
+.vertical-section {
     height: 100vh;
     display: flex;
     padding: 3rem 8rem;
@@ -219,14 +249,14 @@ a {
     text-align: center;
 }
 
-.section p {
+.vertical-section p {
     margin-top: 1rem;
     text-wrap: balance;
     text-wrap: pretty; /* Not supported in all browsers */
 }
 
 @media screen and (max-width: 1024px) {
-    .section {
+    .vertical-section {
         padding: 3rem 2rem;
     }
 }

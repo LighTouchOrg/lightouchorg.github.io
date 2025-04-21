@@ -31,16 +31,21 @@
             <a class="hidden home-title-btn" href="#contact" onclick="scrollToSection(page=3)">Contact</a>
         </div>
     </div>
-    <div id="project" class="section" style="color: #e6a733; display: none;">
-        <h2>Le Projet</h2>
-        <p>
-            LighTouch est une caméra intelligente conçue pour transformer n'importe quelle projection vidéo en un écran
-            tactile interactif.
-            Créé à l'origine comme un projet de fin d'études à EPITECH, LighTouch exploite l'analyse vidéo avancée et la
-            technologie Bluetooth pour permettre une interaction utilisateur intuitive et transparente.
-        </p>
+    <div id="project" class="horizontal-section" style="display: none; position: relative;">
+        <div id="project-description">
+            <p>
+                LighTouch est la solution qui changera à tout jamais la manière dont nous interagirons avec nos appareils électroniques.
+            </p>
+            <p>
+                Grâce de l'IA intégrée, LighTouch est capable de détecter les gestes de la main et de les interpréter pour contrôler vos appareils électroniques.
+            </p>
+        </div>
+        <div>
+            <img src="img/Projecteur.PNG" alt="Projecteur" style="position: absolute; left: 0; bottom: 0;"/>
+            <img src="./img/Telelightouch.png" alt="Télé" style="aspect-ratio: 3/2; width: 30%; height: auto; position: absolute; right: 0; top: 0;"/>
+        </div>
     </div>
-    <div id="about" class="section" style="color: #301D55; display: none;">
+    <div id="about" class="vertical-section" style="color: #301D55; display: none;">
         <h2>Qui sommes-nous ?</h2>
         <p>
         <table class="person-table">
@@ -67,7 +72,7 @@
         </table>
         </p>
     </div>
-    <div id="contact" class="section" style="color: #e6a733; display: none;">
+    <div id="contact" class="vertical-section" style="color: #e6a733; display: none;">
         <h2>Nous contacter</h2>
         <p>
             Une idée, une question, un commentaire ?
