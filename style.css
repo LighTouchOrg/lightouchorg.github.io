@@ -188,6 +188,7 @@ a {
 
 .arrow {
     position: fixed;
+    z-index: 1000;
     width: 88px;
     height: 88px;
     bottom: calc(10% - 44px);
