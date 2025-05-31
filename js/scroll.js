@@ -69,6 +69,10 @@ function simulateScroll(event) {
             }
             break;
         case 'keydown':
+            // if an input is focused, do not scroll
+            if ($(event.target).is('input, textarea')) {
+                return;
+            }
             // Directly set to next or previous section
             if (event.key === 'ArrowDown') {
                 scrollToNextSection();

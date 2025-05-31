@@ -96,6 +96,15 @@ a {
     text-decoration: none;
 }
 
+input {
+    border-radius: 0;
+    outline: none;
+    border: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid var(--primary-color);
+    background-color: transparent;
+}
+
 .home-title {
     height: 100%;
     width: 100%;
@@ -184,6 +193,26 @@ a {
 
 .home-title-btn:hover,
 .home-title-btn:focus {
+    box-shadow: inset 15rem 0 0 0 #301d55;
+    color: #fff;
+    border: 1px solid #301d55;
+    transition: box-shadow 0.3s linear, color 0.3s linear, border 0.3s linear;
+}
+
+.submit-btn {
+    height: auto;
+    width: fit-content;
+    border: 1px solid var(--primary-color);
+    padding: .3rem .5rem;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: large;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
     box-shadow: inset 15rem 0 0 0 #301d55;
     color: #fff;
     border: 1px solid #301d55;
