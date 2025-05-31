@@ -43,6 +43,10 @@ h3 {
     font-size: 2rem;
 }
 
+img {
+    opacity: 0.9;
+}
+
 @media screen and (max-width: 1024px) {
     h1 {
         font-size: 8rem;
@@ -257,7 +261,12 @@ a {
 }
 
 @media screen and (max-width: 1024px) {
-    .vertical-section {
+    img {
+        display: none;
+    }
+
+    .vertical-section,
+    .horizontal-section {
         padding: 3rem 2rem;
     }
 }
