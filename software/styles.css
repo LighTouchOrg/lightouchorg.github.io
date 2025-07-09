@@ -1,0 +1,58 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight:700;
+  word-spacing:.1em;
+  letter-spacing:.01em;
+  margin-top: 0;
+  margin-bottom: .5rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size:2rem
+}
+
+h2 {
+  font-size:1.65rem
+}
+
+h3 {
+  font-size:1.45rem
+}
+
+h4 {
+  font-size:1.2rem
+}
+
+h5 {
+  font-size:1rem
+}
+
+h6 {
+  font-size:.67rem
+}
+
+table {
+  border:1px solid #ccc;
+  margin-bottom:1rem
+}
+
+table th,
+
+table td {
+  border:1px solid #ccc;
+  padding:.5rem
+}
+
+img {
+  max-width:100%;
+  height:auto
+}
