@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>LighTouch - Téléchargement</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Téléchargez le logiciel LighTouch pour commencer à contrôler vos appareils avec des gestes de la main" />
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../style.css" />
+    <script defer src="./download.js"></script>
+</head>
+
+<body>
+    <div class="home-title">
+        <div style="margin-top: 2rem; text-align: center;">
+            <p style="font-size: x-large;">
+                Commencez votre expérience de contrôle gestuel dès maintenant
+            </p>
+            
+            <div class="download-section">
+                <h2>LighTouch</h2>
+                <p>
+                    Le logiciel indispensable pour contrôler vos appareils avec des gestes de la main.
+                </p>
+                
+                <div class="download-buttons">
+                    <a href="#" class="download-btn windows" onclick="downloadForPlatform('windows')">
+                        <div class="download-icon">💻</div>
+                        <div class="download-text">
+                            <strong>Windows</strong>
+                            <span>Version 1.1.0</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="download-btn-disabled linux">
+                        <div class="download-icon">🐧</div>
+                        <div class="download-text">
+                            <strong>Linux</strong>
+                            <span>Bientôt disponible</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <p style="font-size: large;">
+                        <strong>Configuration système requise :</strong>
+                    </p>
+                    <ul style="text-align: left; display: inline-block; font-size: large;">
+                        <li>Dispositif matériel LighTouch</li>
+                        <li>4 GB de RAM minimum</li>
+                        <li>500 MB d'espace libre</li>
+                        <li>Connexion Bluetooth (pour connecter le dispositif LighTouch)</li>
+                    </ul>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <h3>Première utilisation ?</h3>
+                    <p style="font-size: large;">
+                        Consultez notre <a href="docs.html" style="color: var(--secondary-color); text-decoration: underline; font-size: large;">documentation</a> 
+                        (en anglais) pour utiliser le logiciel efficacement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        :root {
+            --text-color: #333;
+            --disabled-color: #ccc;
+        }
+
+        .download-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .download-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem 2rem;
+            background-color: var(--background-color);
+            border: 2px solid var(--primary-color);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+
+        .download-btn-disabled {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem 2rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 12px;
+            text-decoration: none;
+            background-color: var(--disabled-color);
+            color: var(--text-color);
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        .download-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(29, 17, 54, 0.3);
+        }
+
+        .download-btn-disabled:hover {
+            background-color: var(--disabled-color);
+            color: var(--text-color);
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .download-icon {
+            font-size: 2rem;
+        }
+        
+        .download-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        
+        .download-text strong {
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+        
+        .download-text span {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .download-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+
+    <script>
+        function downloadForPlatform(platform) {
+            // Ici vous pouvez ajouter la logique de téléchargement
+            // Pour l'instant, on affiche juste une alerte
+            const platformNames = {
+                'windows': 'Windows',
+                'macos': 'macOS', 
+                'linux': 'Linux'
+            };
+            
+            alert(`Téléchargement de LighTouch pour ${platformNames[platform]} en cours...`);
+            
+            // Exemple d'URL de téléchargement - à remplacer par vos vrais liens
+            const downloadUrls = {
+                'windows': 'https://github.com/LighTouchOrg/releases/download/v1.0.0/lightouch-windows.exe',
+                'macos': 'https://github.com/LighTouchOrg/releases/download/v1.0.0/lightouch-macos.dmg',
+                'linux': 'https://github.com/LighTouchOrg/releases/download/v1.0.0/lightouch-linux.AppImage'
+            };
+            
+            // Rediriger vers le téléchargement
+            // window.location.href = downloadUrls[platform];
+        }
+    </script>
+</body>
+
+</html>
