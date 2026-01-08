@@ -17,13 +17,13 @@
             <p style="font-size: x-large;">
                 Commencez votre expérience de contrôle gestuel dès maintenant
             </p>
-            
+
             <div class="download-section">
                 <h2>LighTouch</h2>
                 <p>
                     Le logiciel indispensable pour contrôler vos appareils avec des gestes de la main.
                 </p>
-                
+
                 <div class="download-buttons">
                     <a href="#" class="download-btn windows" onclick="downloadForPlatform('windows')">
                         <div class="download-icon">💻</div>
@@ -32,16 +32,16 @@
                             <span>Version 1.1.0</span>
                         </div>
                     </a>
-                    
-                    <a href="#" class="download-btn-disabled linux">
+
+                    <!-- <a href="#" class="download-btn-disabled linux">
                         <div class="download-icon">🐧</div>
                         <div class="download-text">
                             <strong>Linux</strong>
                             <span>Bientôt disponible</span>
                         </div>
-                    </a>
+                    </a> -->
                 </div>
-                
+
                 <div style="margin-top: 2rem;">
                     <p style="font-size: large;">
                         <strong>Configuration système requise :</strong>
@@ -50,14 +50,14 @@
                         <li>Dispositif matériel LighTouch</li>
                         <li>4 GB de RAM minimum</li>
                         <li>500 MB d'espace libre</li>
-                        <li>Connexion Bluetooth (pour connecter le dispositif LighTouch)</li>
+                        <li>Connexion Wi-Fi (pour connecter le dispositif LighTouch)</li>
                     </ul>
                 </div>
-                
+
                 <div style="margin-top: 3rem;">
                     <h3>Première utilisation ?</h3>
                     <p style="font-size: large;">
-                        Consultez notre <a href="docs.html" style="color: var(--secondary-color); text-decoration: underline; font-size: large;">documentation</a> 
+                        Consultez notre <a href="docs.html" style="color: var(--secondary-color); text-decoration: underline; font-size: large;">documentation</a>
                         (en anglais) pour utiliser le logiciel efficacement.
                     </p>
                 </div>
@@ -76,7 +76,7 @@
             margin: 0 auto;
             padding: 2rem;
         }
-        
+
         .download-buttons {
             display: flex;
             gap: 2rem;
@@ -84,7 +84,7 @@
             flex-wrap: wrap;
             margin: 2rem 0;
         }
-        
+
         .download-btn {
             display: flex;
             align-items: center;
@@ -112,7 +112,7 @@
             cursor: not-allowed;
             pointer-events: none;
         }
-        
+
         .download-btn:hover {
             background-color: var(--primary-color);
             color: var(--background-color);
@@ -126,33 +126,33 @@
             transform: none;
             box-shadow: none;
         }
-        
+
         .download-icon {
             font-size: 2rem;
         }
-        
+
         .download-text {
             display: flex;
             flex-direction: column;
             text-align: left;
         }
-        
+
         .download-text strong {
             font-size: 1.2rem;
             margin-bottom: 0.2rem;
         }
-        
+
         .download-text span {
             font-size: 0.9rem;
             opacity: 0.8;
         }
-        
+
         @media screen and (max-width: 768px) {
             .download-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .download-btn {
                 width: 100%;
                 max-width: 300px;
@@ -166,19 +166,19 @@
             // Pour l'instant, on affiche juste une alerte
             const platformNames = {
                 'windows': 'Windows',
-                'macos': 'macOS', 
+                'macos': 'macOS',
                 'linux': 'Linux'
             };
-            
+
             alert(`Téléchargement de LighTouch pour ${platformNames[platform]} en cours...`);
-            
+
             // Exemple d'URL de téléchargement - à remplacer par vos vrais liens
             const downloadUrls = {
                 'windows': 'https://github.com/LighTouchOrg/releases/download/v1.0.0/lightouch-windows.exe',
                 'macos': 'https://github.com/LighTouchOrg/releases/download/v1.0.0/lightouch-macos.dmg',
                 'linux': 'https://github.com/LighTouchOrg/releases/download/v1.0.0/lightouch-linux.AppImage'
             };
-            
+
             // Rediriger vers le téléchargement
             // window.location.href = downloadUrls[platform];
         }
